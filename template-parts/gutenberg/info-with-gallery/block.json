@@ -1,0 +1,20 @@
+{
+    "name": "acf/info-with-gallery",
+    "title": "Info with gallery",
+    "description": "",
+    "style": ["file:./info-with-gallery.css"],
+    "script": ["file:./info-with-gallery.js"],
+    "editorScript": ["file:./info-with-gallery-admin.js"],
+    "editorStyle": ["file:./info-with-gallery-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["info-with-gallery"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "info-with-gallery.php"
+    },
+    "align": "full"
+}

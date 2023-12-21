@@ -1,0 +1,20 @@
+{
+    "name": "acf/news",
+    "title": "News",
+    "description": "",
+    "style": ["file:./news.css"],
+    "script": ["file:./news.js"],
+    "editorScript": ["file:./news-admin.js"],
+    "editorStyle": ["file:./news-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["news"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "news.php"
+    },
+    "align": "full"
+}

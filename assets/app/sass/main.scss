@@ -1,0 +1,237 @@
+@use "inc" as *;
+
+body {
+    font-size: 16px;
+    font-family: $mainFont;
+    font-weight: normal;
+    font-style: normal;
+    color: $mainColor;
+    background: $white;
+    -webkit-font-smoothing: antialiased;
+    &.ovf_hidden {
+        overflow: hidden;
+    }
+}
+html,
+body {
+    @include mq-inv-small {
+        overflow-x: hidden;
+    }
+}
+
+section {
+    display: block;
+}
+a {
+    color: inherit;
+}
+figcaption {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+    color: $grey;
+    margin-top: 5px;
+    @include mq-inv-extra-large {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+audio {
+    display: block !important;
+    width: 100%;
+    background: $mainColor;
+
+    &::-webkit-media-controls-panel {
+        background: $mainColor;
+    }
+    &::-webkit-media-controls-enclosure {
+        border-radius: 0;
+    }
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display {
+        color: $white;
+        text-shadow: none;
+        font-family: $mainFont;
+    }
+    &::-webkit-media-controls-timeline,
+    &::-webkit-media-controls-mute-button,
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-volume-slider {
+        filter: invert(1);
+        position: relative;
+        z-index: 5;
+    }
+}
+.audio_icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--background-color, $mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    @include mq-inv-small {
+        width: 30px;
+        height: 30px;
+    }
+    span {
+        width: 2px;
+        height: 22px;
+        border-radius: 16px;
+        background-color: var(--text-color, $white);
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        @include mq-inv-small {
+            width: 1px;
+            height: 16px;
+        }
+        &:nth-child(1),
+        &:nth-child(7) {
+            transform: scaleY(0.3);
+            animation-name: player1;
+            @keyframes player1 {
+                25% {
+                    transform: scaleY(0.6);
+                }
+                50% {
+                    transform: scaleY(0.4);
+                }
+                75% {
+                    transform: scaleY(0.8);
+                }
+            }
+        }
+        &:nth-child(2) {
+            transform: scaleY(0.7);
+            animation-name: player2;
+            @keyframes player2 {
+                25% {
+                    transform: scaleY(0.3);
+                }
+                50% {
+                    transform: scaleY(0.7);
+                }
+                75% {
+                    transform: scaleY(0.2);
+                }
+            }
+        }
+        &:nth-child(3) {
+            transform: scaleY(0.4);
+            animation-name: player3;
+            @keyframes player3 {
+                25% {
+                    transform: scaleY(0.6);
+                }
+                50% {
+                    transform: scaleY(0.2);
+                }
+                75% {
+                    transform: scaleY(0.8);
+                }
+            }
+        }
+        &:nth-child(4) {
+            transform: scaleY(0.6);
+            animation-name: player4;
+            @keyframes player4 {
+                25% {
+                    transform: scaleY(0.1);
+                }
+                50% {
+                    transform: scaleY(0.5);
+                }
+                75% {
+                    transform: scaleY(0.4);
+                }
+            }
+        }
+        &:nth-child(5) {
+            animation-name: player5;
+            @keyframes player5 {
+                25% {
+                    transform: scaleY(0.6);
+                }
+                50% {
+                    transform: scaleY(0.4);
+                }
+                75% {
+                    transform: scaleY(1);
+                }
+            }
+        }
+        &:nth-child(6) {
+            transform: scaleY(0.5);
+            animation-name: player6;
+            @keyframes player6 {
+                25% {
+                    transform: scaleY(0.7);
+                }
+                50% {
+                    transform: scaleY(0.5);
+                }
+                75% {
+                    transform: scaleY(0.6);
+                }
+            }
+        }
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.container {
+    max-width: 1730px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+    @include mq-inv-large {
+        padding: 0 20px;
+    }
+    @include mq-inv-medium {
+        padding: 0 15px;
+    }
+    &_fluid {
+        max-width: 1450px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 25px;
+        @include mq-inv-large {
+            padding: 0 20px;
+        }
+        @include mq-inv-medium {
+            padding: 0 15px;
+        }
+    }
+}
+
+main {
+    position: relative;
+}
+//header & common
+@import "parts/header";
+
+@import "parts/link";
+@import "parts/layout";
+
+//pages
+//@import 'pages/front_page';
+@import "pages/page";
+
+//footer
+@import "parts/footer";
+
+@import "parts/search_form";
+
+//typography
+@import "inc/index";
+
+//abstracts
+@import "abstracts/swiper";
+@import "abstracts/fancybox";
+@import "abstracts/roundSlider";
+//typography
+@import "typography/typography";

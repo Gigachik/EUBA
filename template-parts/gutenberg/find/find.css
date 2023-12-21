@@ -1,0 +1,136 @@
+.find {
+    padding: 95px 0 125px;
+    border-bottom: 3px solid #4e5873;
+    background: #002851;
+}
+@media screen and (max-width: 1700px) {
+    .find {
+        padding: 45px 0 75px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .find {
+        padding: 80px 0 38px;
+    }
+}
+.find_top {
+    position: relative;
+}
+.find_top-gif {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 260px;
+    z-index: 2;
+}
+@media screen and (max-width: 1700px) {
+    .find_top-gif {
+        max-width: 190px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .find_top-gif {
+        max-width: 160px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .find_top-gif {
+        max-width: 90px;
+        bottom: 0;
+    }
+}
+.find_inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    row-gap: 42px;
+    -webkit-column-gap: 35px;
+    -moz-column-gap: 35px;
+    column-gap: 35px;
+    margin-top: 85px;
+}
+@media screen and (max-width: 1700px) {
+    .find_inner {
+        margin-top: 45px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .find_inner {
+        row-gap: 26px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .find_inner {
+        margin-top: 30px;
+        row-gap: 20px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
+.find h2 {
+    color: #f6f1ff;
+}
+.find_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 104px;
+    padding: 20px 35px;
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.665px;
+    text-transform: uppercase;
+    color: #f6f1ff;
+    border: 2px solid #f6f1ff;
+    border-radius: 66px;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.find_link:hover {
+    background: #f6f1ff;
+    color: #002851;
+}
+@media screen and (max-width: 1700px) {
+    .find_link {
+        font-size: 24px;
+        min-height: 94px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .find_link {
+        font-size: 16px;
+        padding: 10px 25px;
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 767px) {
+    .find_link {
+        width: 100%;
+        padding: 10px 35px;
+        min-height: 51px;
+    }
+}
+.mac .find_link {
+    padding: 20px 35px 12px;
+}
+@media screen and (max-width: 1024px) {
+    .mac .find_link {
+        padding: 10px 25px 6px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .mac .find_link {
+        padding: 10px 35px 6px;
+    }
+}
+/*# sourceMappingURL=find.css.map */

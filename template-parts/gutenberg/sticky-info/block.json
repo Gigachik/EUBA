@@ -1,0 +1,20 @@
+{
+    "name": "acf/sticky-info",
+    "title": "Sticky info",
+    "description": "",
+    "style": ["file:./sticky-info.css"],
+    "script": ["file:./sticky-info.js"],
+    "editorScript": ["file:./sticky-info-admin.js"],
+    "editorStyle": ["file:./sticky-info-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["sticky-info"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "sticky-info.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,29 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.sticky_info {
+    padding: 45px 0;
+    @include mq-inv-desktop {
+        padding: 30px 0;
+    }
+    @include mq-inv-small {
+        padding: 20px 0;
+    }
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        @include mq-inv-tablet {
+            gap: 20px;
+        }
+        @include mq-inv-small {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+    }
+    &-item {
+        img {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}

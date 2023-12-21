@@ -1,0 +1,99 @@
+.image_quote {
+    padding: 45px 0;
+}
+@media screen and (max-width: 1700px) {
+    .image_quote {
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .image_quote {
+        padding: 20px 0;
+    }
+}
+.image_quote-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+@media screen and (max-width: 480px) {
+    .image_quote-inner {
+        gap: 10px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+.image_quote-inner.alone {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.image_quote-img img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+@media screen and (max-width: 480px) {
+    .image_quote-img img {
+        width: 55px;
+        height: 55px;
+    }
+}
+.image_quote-block {
+    padding-top: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+@media screen and (max-width: 480px) {
+    .image_quote-block {
+        padding-top: 0;
+    }
+}
+.image_quote-block h3 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.766px;
+    text-transform: initial;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 1400px) {
+    .image_quote-block h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .image_quote-block h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .image_quote-block h4 {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+}
+.image_quote-block h5,
+.image_quote-block p {
+    color: #798197;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+    .image_quote-block h5,
+    .image_quote-block p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+/*# sourceMappingURL=image_quote.css.map */

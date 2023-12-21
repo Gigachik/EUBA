@@ -1,0 +1,20 @@
+{
+    "name": "acf/image-with-caption",
+    "title": "Image with caption",
+    "description": "",
+    "style": ["file:./image-with-caption.css"],
+    "script": ["file:./image-with-caption.js"],
+    "editorScript": ["file:./image-with-caption-admin.js"],
+    "editorStyle": ["file:./image-with-caption-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["image-with-caption"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-with-caption.php"
+    },
+    "align": "full"
+}

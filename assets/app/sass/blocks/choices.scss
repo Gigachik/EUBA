@@ -1,0 +1,205 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+section.choices {
+    padding: 45px 0 125px;
+    @include mq-inv-desktop {
+        padding: 30px 0 75px;
+    }
+    @include mq-inv-small {
+        padding: 35px 0;
+    }
+}
+.choices {
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    &_inner {
+        display: flex;
+        align-items: flex-start;
+        gap: 140px;
+
+        @include mq-inv-extra-large {
+            gap: 70px;
+        }
+        @include mq-inv-tablet {
+            display: block;
+        }
+        &-form {
+            flex: 1;
+        }
+        &-block {
+            &.sticky {
+                top: 70px;
+                @include mq-inv-tablet {
+                    position: relative;
+                    top: 0;
+                }
+            }
+            align-self: start;
+            border-radius: 25px;
+            max-width: 530px;
+            margin-top: 70px;
+            @include mq-inv-extra-large {
+                max-width: 450px;
+            }
+            @include mq-inv-tablet {
+                position: relative;
+                top: 0;
+            }
+        }
+        &-top {
+            border-radius: 25px 25px 0 0;
+            position: relative;
+            padding: 15px 28px;
+            background: $mainColor;
+            padding-right: 160px;
+            border: 2px solid $mainColor;
+            border-bottom: 0;
+            @include mq-inv-tablet {
+                padding-right: 100px;
+            }
+            @include mq-inv-small {
+                padding: 10px 90px 10px 15px;
+            }
+            h5 {
+                color: $white;
+                margin-bottom: 0;
+            }
+            img {
+                width: 184px;
+                height: 184px;
+                object-fit: cover;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: -70px;
+                right: -20px;
+                @include mq-inv-extra-large {
+                    width: 140px;
+                    height: 140px;
+                    right: -15px;
+                    top: -50px;
+                }
+                @include mq-inv-tablet {
+                    width: 80px;
+                    height: 80px;
+                    top: -20px;
+                    right: -5px;
+                }
+            }
+        }
+        .text {
+            padding: 25px;
+            border: 2px solid $mainColor;
+            border-radius: 0 0 25px 25px;
+            @include mq-inv-small {
+                padding: 15px;
+            }
+            h6,
+            h5 {
+                margin-bottom: 5px;
+                padding-right: 135px;
+                @include mq-inv-tablet {
+                    padding-right: 0;
+                }
+            }
+        }
+        &-item {
+            border-radius: 25px;
+            border: 2px solid $mainColor;
+            &:not(:last-child) {
+                margin-bottom: 35px;
+                @include mq-inv-tablet {
+                    margin-bottom: 20px;
+                }
+                @include mq-inv-small {
+                    margin-bottom: 15px;
+                }
+            }
+            h4 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                min-height: 105px;
+                padding: 15px 100px;
+                margin-bottom: 0;
+                font-size: 22px;
+                @include mq-inv-tablet {
+                    min-height: 90px;
+                }
+                @include mq-inv-tablet {
+                    font-size: 17px;
+                    min-height: 70px;
+                    padding: 15px 70px;
+                }
+                @include mq-inv-small {
+                    font-size: 10px;
+                    min-height: 50px;
+                }
+                &:first-child {
+                    border-bottom: 2px solid $mainColor;
+                }
+                &.active {
+                    font-weight: 600;
+                    font-size: 27px;
+                    @include mq-inv-tablet {
+                        font-size: 21px;
+                    }
+                    @include mq-inv-small {
+                        font-size: 13px;
+                    }
+                    span {
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            top: -8px;
+                            left: 0;
+                            width: 60px;
+                            height: 67px;
+                            background: center / contain url("./choices.svg")
+                                no-repeat;
+                            @include mq-inv-tablet {
+                                width: 30px;
+                                height: 35px;
+                                top: -4px;
+                            }
+                        }
+                    }
+                }
+                span {
+                    position: absolute;
+                    display: table;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 2px solid $mainColor;
+                    top: 50%;
+                    left: 30px;
+                    transform: translateY(-50%);
+                    @include mq-inv-tablet {
+                        width: 25px;
+                        height: 25px;
+                        left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.mac {
+    .choices_inner-top {
+        padding: 15px 28px 8px;
+        padding-right: 160px;
+        @include mq-inv-tablet {
+            padding-right: 80px;
+        }
+        @include mq-inv-small {
+            padding: 10px 20px 5px;
+            padding-right: 80px;
+        }
+    }
+}

@@ -1,0 +1,687 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.category_tag {
+    padding-top: 85px;
+    @include mq-inv-desktop {
+        padding-top: 45px;
+    }
+    @include mq-inv-tablet {
+        padding-top: 35px;
+    }
+    &.sec {
+        padding-top: 70px;
+        @include mq-inv-desktop {
+            padding-top: 40px;
+        }
+        @include mq-inv-tablet {
+            padding-top: 30px;
+        }
+    }
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq-inv-small {
+            display: block;
+        }
+    }
+    .tag {
+        font-size: 21px;
+        @include mq-inv-small {
+            margin-top: 10px;
+        }
+    }
+}
+.title_category {
+    padding: 85px 0;
+    @include mq-inv-desktop {
+        padding: 40px 0;
+    }
+    @include mq-inv-small {
+        padding: 30px 0;
+    }
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        @include mq-inv-small {
+            gap: 10px;
+        }
+    }
+}
+.interviews {
+    padding: 95px 0 125px;
+    @include mq-inv-desktop {
+        padding: 45px 0;
+    }
+    @include mq-inv-small {
+        padding: 35px 0;
+    }
+    &:last-child {
+        padding: 125px 0;
+        @include mq-inv-desktop {
+            padding: 45px 0;
+        }
+        @include mq-inv-small {
+            padding: 35px 0;
+        }
+    }
+    .container_fluid > .text {
+        margin-bottom: 85px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        @include mq-inv-desktop {
+            margin-bottom: 45px;
+        }
+        @include mq-inv-small {
+            margin-bottom: 25px;
+        }
+    }
+    &_inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 125px;
+        grid-column-gap: 40px;
+        @include mq-inv-desktop {
+            grid-row-gap: 75px;
+            grid-column-gap: 40px;
+        }
+        @include mq-inv-tablet {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+    }
+    &_item {
+        @include mq-inv-tablet {
+            &:not(:last-child) {
+                padding-bottom: 35px;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    left: -20px;
+                    width: 100vw;
+                    height: 2px;
+                    background: $mainColor;
+                    @include mq-inv-small {
+                        left: -15px;
+                    }
+                }
+            }
+        }
+        &.besuch {
+            a {
+                margin-bottom: 30px;
+                @include mq-inv-small {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .tag {
+            font-size: 21px;
+        }
+        &-flex {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include mq-inv-small {
+                margin-top: 15px;
+                gap: 15px;
+            }
+            svg {
+                @include mq-inv-small {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        h3 {
+            margin-top: 30px;
+            @include mq-inv-small {
+                margin-top: 15px;
+            }
+        }
+        &-img {
+            display: block;
+            position: relative;
+            img {
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                display: block;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: rgba($mainColor, 0.9);
+                opacity: 0;
+                transition: $transition;
+            }
+            &:hover {
+                &::before,
+                .interviews_item-zoom {
+                    opacity: 1;
+                }
+            }
+        }
+        &-zoom {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: table;
+            font-size: 29px;
+            line-height: 36px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $white;
+            padding-right: 35px;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: $transition;
+            z-index: 2;
+            white-space: nowrap;
+            @include mq-inv-extra-large {
+                font-size: 17px;
+                line-height: 22px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                top: 6px;
+                right: 0;
+                width: 22px;
+                height: 22px;
+                background: center / contain url("../svg/link-arrow.svg")
+                    no-repeat;
+                @include mq-inv-extra-large {
+                    top: 0;
+                    height: 18px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+.selected_news {
+    background: $mainColor;
+    padding: 85px 0;
+    @include mq-inv-desktop {
+        padding: 40px 0;
+    }
+    @include mq-inv-small {
+        padding: 35px 0;
+    }
+    &-inner {
+        display: flex;
+        gap: 40px;
+        @include mq-inv-tablet {
+            display: block;
+        }
+    }
+    &-img {
+        position: relative;
+        flex: 1;
+        @include mq-inv-tablet {
+            margin-bottom: 15px;
+        }
+    }
+    &-image {
+        display: block;
+        width: 100%;
+    }
+    &-flex {
+        position: absolute;
+        bottom: 35px;
+        left: 35px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .border_text {
+            color: $white;
+            border-color: $white;
+            &:hover {
+                color: $mainColor !important;
+            }
+        }
+        @include mq-inv-tablet {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-top: 15px;
+        }
+        @include mq-inv-small {
+            gap: 15px;
+        }
+    }
+    &-block {
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include mq-inv-extra-large {
+            width: 400px;
+        }
+        @include mq-inv-tablet {
+            width: 100%;
+        }
+        .link {
+            margin-top: auto;
+        }
+        .text {
+            color: $white;
+        }
+        .tag {
+            font-size: 21px;
+            color: $white;
+            @include mq-inv-tablet {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+.intro {
+    padding: 85px 0;
+    background-size: cover;
+    background-position: left bottom;
+    position: relative;
+    min-height: 790px;
+    display: flex;
+    align-items: center;
+    @include mq-inv-desktop {
+        min-height: 590px;
+        padding: 80px 0;
+    }
+    @include mq-inv-extra-large {
+        min-height: 490px;
+    }
+    @include mq-inv-small {
+        align-items: flex-start;
+        padding: 355px 0 75px;
+        background-position: top left;
+    }
+    &_inner {
+        max-width: 800px;
+        margin-left: auto;
+        color: $white;
+        @include mq-inv-extra-large {
+            max-width: 600px;
+        }
+        @include mq-inv-tablet {
+            max-width: 500px;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .text {
+            h3 {
+                font-weight: 400;
+            }
+        }
+    }
+}
+.news_list {
+    padding: 85px 0 125px;
+    @include mq-inv-desktop {
+        padding: 45px 0 75px;
+    }
+    @include mq-inv-small {
+        padding: 30px 0 35px;
+    }
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 125px;
+        @include mq-inv-desktop {
+            grid-row-gap: 65px;
+        }
+        @include mq-inv-extra-large {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mq-inv-small {
+            grid-template-columns: 1fr;
+            grid-row-gap: 35px;
+        }
+    }
+    &-img {
+        margin-bottom: 30px;
+        @include mq-inv-small {
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+    }
+    h1.border_text {
+        margin-bottom: 95px;
+        @include mq-inv-desktop {
+            margin-bottom: 45px;
+        }
+        @include mq-inv-small {
+            margin-bottom: 35px;
+        }
+    }
+}
+.full_image {
+    img {
+        width: 100%;
+        display: block;
+        box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+        @include mq-inv-small {
+            min-height: 350px;
+            object-fit: cover;
+        }
+    }
+    &.background_only {
+        min-height: 790px;
+        box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+        @include mq-inv-desktop {
+            min-height: 550px;
+        }
+        @include mq-inv-small {
+            min-height: 350px;
+        }
+    }
+}
+.welcome {
+    &_bg {
+        background-size: cover;
+        background-position: left bottom;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        @include mq-inv-tablet {
+            background-position: 28% bottom;
+        }
+        @include mq-inv-small {
+            align-items: flex-start;
+            background-position: top left;
+        }
+    }
+    .container_fluid {
+        position: relative;
+        padding: 85px 0;
+        min-height: 790px;
+        @include mq-inv-desktop {
+            min-height: 590px;
+            padding: 80px 25px;
+        }
+        @include mq-inv-extra-large {
+            min-height: 490px;
+            padding: 60px 25px;
+        }
+        @include mq-inv-large {
+            padding: 80px 20px;
+        }
+        @include mq-inv-medium {
+            padding: 80px 15px;
+        }
+        @include mq-inv-small {
+            padding: 355px 15px 75px;
+        }
+    }
+    &_inner {
+        max-width: 800px;
+        margin-left: auto;
+        color: $white;
+        @include mq-inv-extra-large {
+            max-width: 600px;
+        }
+        @include mq-inv-tablet {
+            max-width: 500px;
+        }
+        @include mq-inv-small {
+            max-width: 100%;
+        }
+        .border_text {
+            color: $white;
+            border-color: $white;
+            margin-bottom: 40px;
+        }
+        .text {
+            @include mq-inv-desktop {
+                p {
+                    font-size: 16px;
+                    line-height: 22px;
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+                h1,
+                h2 {
+                    font-size: 32px !important;
+                    line-height: 36px;
+                    margin-bottom: 15px;
+                }
+                h3,
+                h4 {
+                    font-size: 17px;
+                    line-height: 22px;
+                    margin-bottom: 15px;
+                }
+                h5,
+                h6 {
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &_link {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        max-width: 835px;
+        width: 100%;
+        font-size: 37px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $white;
+        background: $mainColor;
+        text-align: center;
+        padding: 36px 120px;
+        border-radius: 124px;
+        border: 2px solid $white;
+        transform: translateY(50%);
+        transition: $transition;
+        &:hover {
+            background: $blue;
+        }
+        @include mq-inv-desktop {
+            font-size: 22px;
+            max-width: 650px;
+            right: 10%;
+            padding: 25px 120px;
+        }
+        @include mq-inv-extra-large {
+            right: 25px;
+        }
+        @include mq-inv-large {
+            right: 20px;
+        }
+        @include mq-inv-medium {
+            right: 15px;
+        }
+        @include mq-inv-tablet {
+            max-width: 500px;
+        }
+        @include mq-inv-small {
+            max-width: calc(100% - 30px);
+            left: 15px;
+            font-size: 14px;
+            padding: 12px 60px;
+        }
+        span {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            border-right: 2px solid $white;
+            @include mq-inv-desktop {
+                width: 80px;
+                img {
+                    width: 25px;
+                }
+            }
+            @include mq-inv-small {
+                width: 50px;
+                img {
+                    width: 15px;
+                }
+            }
+        }
+    }
+}
+.trainees {
+    &_inner {
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+        &-top {
+            border-radius: 25px 25px 0 0;
+            border: 2px solid $mainColor;
+            background: $mainColor;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            @include mq-inv-small {
+                padding: 10px 15px;
+                img {
+                    width: 15px;
+                }
+            }
+            h6 {
+                color: $white;
+                margin-bottom: 0;
+            }
+        }
+        &-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 25px 25px 20px 25px;
+            border: 2px solid $mainColor;
+            border-radius: 0 0 25px 25px;
+            @include mq-inv-small {
+                padding: 15px;
+            }
+            .link {
+                display: table;
+                margin-top: auto;
+                font-size: 21px;
+                color: $blue;
+                @include mq-inv-extra-large {
+                    font-size: 17px;
+                    padding-right: 30px;
+                }
+                &::before {
+                    top: 10px;
+                    right: 0;
+                    width: 20px;
+                    height: 16px;
+                    background: center / contain
+                        url("../assets/app/svg/arrow_right.svg") no-repeat;
+                    @include mq-inv-extra-large {
+                        top: 3px;
+                    }
+                }
+                &::after {
+                    width: 20px;
+                    height: 16px;
+                    background: center / contain
+                        url("../assets/app/svg/arrow_right.svg") no-repeat;
+                }
+            }
+        }
+    }
+}
+.single_page {
+    padding: 70px 0 105px;
+    @include mq-inv-desktop {
+        padding: 45px 0 75px;
+    }
+    @include mq-inv-small {
+        padding: 30px 0 35px;
+    }
+}
+.h5ap_standard_player {
+    border: 2px solid $mainColor;
+    .plyr__controls {
+        background: transparent !important;
+    }
+    .plyr__control {
+        svg {
+            fill: $mainColor;
+        }
+        &:hover {
+            background-color: $mainColor !important;
+            svg {
+                fill: $white;
+            }
+        }
+    }
+    .plyr__volume,
+    .plyr__volume + .plyr__control {
+        display: none;
+    }
+    .plyr__time {
+        font-family: $mainFont;
+        font-size: 16px;
+        color: $mainColor;
+    }
+    .plyr--full-ui input[type="range"] {
+        color: $blue;
+        &::-webkit-slider-thumb {
+            background: $mainColor;
+        }
+    }
+}
+.sticky {
+    position: sticky;
+    align-self: start;
+    top: 10px;
+    @include mq-inv-small {
+        position: relative;
+        top: 0;
+    }
+}
+.mac {
+    .welcome {
+        &_link {
+            padding-bottom: 30px;
+            @include mq-inv-desktop {
+                padding-bottom: 20px;
+            }
+            @include mq-inv-small {
+                padding-bottom: 8px;
+            }
+        }
+    }
+    .trainees_inner-top {
+        padding: 15px 30px 8px;
+        @include mq-inv-small {
+            padding: 10px 15px 5px;
+        }
+    }
+}

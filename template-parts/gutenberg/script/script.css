@@ -1,0 +1,9 @@
+.script {
+    padding: 65px 0;
+}
+@media screen and (max-width: 1700px) {
+    .script {
+        padding: 30px 0;
+    }
+}
+/*# sourceMappingURL=script.css.map */

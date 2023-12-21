@@ -1,0 +1,399 @@
+.header {
+    position: relative;
+    background: $mainColor;
+    box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.12),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @include mq-inv-small {
+        padding: 25px 0;
+    }
+    &_logo {
+        img {
+            max-width: 430px;
+            @include mq-inv-desktop {
+                max-width: 300px;
+            }
+            @include mq-inv-small {
+                max-width: 220px;
+            }
+        }
+    }
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        @include mq-inv-tablet {
+            flex-wrap: wrap;
+        }
+    }
+    .burger {
+        position: relative;
+        width: 62px;
+        height: 34px;
+        cursor: pointer;
+        border: 0;
+        outline: none;
+        background: transparent;
+        @include mq-inv-small {
+            width: 31px;
+            height: 16px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $white;
+            transform: translateY(-50%);
+            transition: $transition;
+        }
+        &_item {
+            width: 100%;
+            height: 100%;
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: $white;
+                transition: $transition;
+            }
+            &::after {
+                top: initial;
+                bottom: 0;
+            }
+        }
+        &.active {
+            &::before {
+                opacity: 0;
+            }
+            .burger_item {
+                &::before {
+                    transform: translateY(16px) rotate(45deg);
+                    @include mq-inv-small {
+                        transform: translateY(8px) rotate(45deg);
+                    }
+                }
+                &::after {
+                    transform: translateY(-16px) rotate(-45deg);
+                    @include mq-inv-small {
+                        transform: translateY(-6px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    &_burger {
+        width: 402px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-left: 2px solid transparent;
+        padding: 10px 0;
+        @include mq-inv-desktop {
+            width: 342px;
+        }
+        @include mq-inv-tablet {
+            border-left: 0;
+            width: auto;
+        }
+    }
+    &.active {
+        .header_burger {
+            border-color: $white;
+        }
+    }
+    &_navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $mainColor;
+        z-index: 100;
+        &.active {
+            display: block;
+        }
+        &-logout {
+            margin-right: 400px;
+            padding-right: 70px;
+            padding-bottom: 80px;
+            margin-left: auto;
+            display: flex;
+            justify-content: flex-end;
+            border-right: 2px solid $white;
+            @include mq-inv-desktop {
+                margin-right: 340px;
+                padding-bottom: 30px;
+            }
+            @include mq-inv-small {
+                padding-bottom: 40px;
+                margin-right: 0;
+                padding-right: 0;
+                border-right: 0;
+                justify-content: flex-start;
+            }
+            a {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 22px;
+                line-height: 32px;
+                font-weight: 600;
+                color: $white;
+                padding-right: 20px;
+                @include mq-inv-extra-large {
+                    font-size: 17px;
+                    line-height: 24px;
+                }
+                @include mq-inv-small {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    padding-right: 0;
+                    gap: 5px;
+                }
+                img {
+                    @include mq-inv-desktop {
+                        width: 50px;
+                    }
+                    @include mq-inv-small {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+        nav {
+            position: relative;
+            margin-right: 400px;
+            padding: 80px 70px 40px 0;
+            border-right: 2px solid $white;
+            @include mq-inv-desktop {
+                margin-right: 340px;
+                padding: 30px 70px 30px 0;
+            }
+            @include mq-inv-small {
+                margin-right: 0;
+                border-right: 0;
+                padding: 15px 0 40px 0;
+            }
+            ul {
+                padding-left: 0;
+                li {
+                    display: table;
+                    margin-left: auto;
+                    margin-bottom: 35px;
+                    @include mq-inv-desktop {
+                        margin-bottom: 15px;
+                    }
+                    @include mq-inv-small {
+                        margin-left: 0;
+                        margin-right: 0;
+                        margin-bottom: 25px;
+                    }
+                    &.menu-item-has-children {
+                        & > a {
+                            padding: 10px 45px 10px 30px;
+                            margin-right: -15px;
+                            @include mq-inv-small {
+                                padding: 0;
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                top: 50%;
+                                right: 20px;
+                                width: 8px;
+                                height: 8px;
+                                border: 2px solid $grey;
+                                border-bottom: 0;
+                                border-left: 0;
+                                transform: translateY(-50%) rotate(45deg);
+                                @include mq-inv-small {
+                                    display: none;
+                                }
+                            }
+                        }
+                        @include mq-inv-small {
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            span {
+                                display: inline-block;
+                                width: 12px;
+                                height: 12px;
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    top: 0;
+                                    right: 0;
+                                    width: 6px;
+                                    height: 6px;
+                                    border: 2px solid $grey;
+                                    border-bottom: 2px solid $grey;
+                                    border-top: 0;
+                                    border-left: 0;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                            ul {
+                                position: relative;
+                                top: 0;
+                                left: 0;
+                                height: auto;
+                                padding: 0;
+                                width: 100%;
+                                padding-left: 10px;
+                                &.active {
+                                    display: block;
+                                }
+                                li {
+                                    &:not(:last-child) {
+                                        margin-bottom: 10px;
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                    a {
+                                        font-size: 13px;
+                                        padding-bottom: 2px;
+                                        &::before {
+                                            height: 1px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        position: relative;
+                        font-size: 22px;
+                        line-height: 1;
+                        font-weight: 600;
+                        padding: 10px 30px;
+                        text-transform: uppercase;
+                        color: $white;
+                        text-align: right;
+                        display: table;
+                        margin-left: auto;
+                        border: 2px solid transparent;
+                        border-radius: 50px;
+                        transition: $transition;
+                        &:hover {
+                            border-color: $grey;
+                            color: $grey;
+                        }
+                        @include mq-inv-desktop {
+                            font-size: 17px;
+                            line-height: 24px;
+                        }
+                        @include mq-inv-small {
+                            font-size: 14px;
+                            line-height: 20px;
+                            padding: 0 40px 0 0;
+                            font-weight: 400;
+                            text-align: left;
+                            border: 0;
+                        }
+                    }
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        left: calc(100% - 70px);
+                        width: 440px;
+                        height: 100%;
+                        padding: 90px 0 0 120px;
+                        @include mq-inv-desktop {
+                            padding: 40px 0 0 120px;
+                        }
+                        li {
+                            display: table;
+                            margin-left: 0;
+                            position: relative;
+                            &:not(:last-child) {
+                                margin-bottom: 30px;
+                                @include mq-inv-desktop {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            a {
+                                position: relative;
+                                padding: 0 0 8px 0;
+                                border: 0;
+                                text-align: left;
+                                margin-left: 0;
+                                font-weight: 400;
+                                border-radius: 0;
+                                transition: $transition;
+
+                                &::before {
+                                    display: none;
+                                }
+                                &:hover {
+                                    &::before {
+                                        transform: scaleX(1);
+                                    }
+                                }
+                                &::before {
+                                    display: block;
+                                    position: absolute;
+                                    content: "";
+                                    background-color: var(--text-color, $white);
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 2px;
+                                    transform: scaleX(0);
+                                    transform-origin: left;
+                                    transition: $transition;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        ul {
+                            display: block;
+                            @include mq-inv-small {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mac {
+    .header_navigation {
+        nav {
+            ul {
+                li {
+                    &.menu-item-has-children {
+                        span {
+                            &::before {
+                                top: -2px;
+                            }
+                        }
+                        & > a {
+                            padding: 10px 45px 6px 30px;
+                            @include mq-inv-desktop {
+                                padding: 10px 45px 3px 30px;
+                            }
+                            @include mq-inv-small {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

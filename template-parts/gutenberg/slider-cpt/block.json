@@ -1,0 +1,20 @@
+{
+    "name": "acf/slider-cpt",
+    "title": "Slider cpt",
+    "description": "",
+    "style": ["file:./slider-cpt.css"],
+    "script": ["file:./slider-cpt.js"],
+    "editorScript": ["file:./slider-cpt-admin.js"],
+    "editorStyle": ["file:./slider-cpt-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["slider-cpt"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "slider-cpt.php"
+    },
+    "align": "full"
+}

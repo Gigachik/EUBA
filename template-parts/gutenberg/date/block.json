@@ -1,0 +1,20 @@
+{
+    "name": "acf/date",
+    "title": "Date",
+    "description": "",
+    "style": ["file:./date.css"],
+    "script": ["file:./date.js"],
+    "editorScript": ["file:./date-admin.js"],
+    "editorStyle": ["file:./date-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["date"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "date.php"
+    },
+    "align": "full"
+}

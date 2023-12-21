@@ -1,0 +1,20 @@
+{
+    "name": "acf/cards",
+    "title": "Cards",
+    "description": "",
+    "style": ["file:./cards.css"],
+    "script": ["file:./cards.js"],
+    "editorScript": ["file:./cards-admin.js"],
+    "editorStyle": ["file:./cards-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["cards"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "cards.php"
+    },
+    "align": "full"
+}

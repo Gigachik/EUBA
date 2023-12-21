@@ -1,0 +1,181 @@
+.interviews {
+    padding: 95px 0 125px;
+}
+@media screen and (max-width: 1700px) {
+    .interviews {
+        padding: 45px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .interviews {
+        padding: 35px 0;
+    }
+}
+.interviews:last-child {
+    padding: 125px 0;
+}
+@media screen and (max-width: 1700px) {
+    .interviews:last-child {
+        padding: 45px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .interviews:last-child {
+        padding: 35px 0;
+    }
+}
+.interviews .container_fluid > .text {
+    margin-bottom: 85px;
+}
+.interviews .container_fluid > .text h2 {
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 1700px) {
+    .interviews .container_fluid > .text {
+        margin-bottom: 45px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .interviews .container_fluid > .text {
+        margin-bottom: 25px;
+    }
+}
+.interviews_inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+@media screen and (max-width: 1024px) {
+    .interviews_inner {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .interviews_item:not(:last-child) {
+        padding-bottom: 35px;
+        position: relative;
+    }
+    .interviews_item:not(:last-child)::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: -20px;
+        width: 100vw;
+        height: 1px;
+        background: #002851;
+    }
+}
+@media screen and (max-width: 1024px) and (max-width: 767px) {
+    .interviews_item:not(:last-child)::before {
+        left: -15px;
+    }
+}
+.interviews_item.besuch a {
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+    .interviews_item.besuch a {
+        margin-bottom: 15px;
+    }
+}
+.interviews_item .tag {
+    font-size: 21px;
+}
+.interviews_item-flex {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+}
+@media screen and (max-width: 767px) {
+    .interviews_item-flex {
+        margin-top: 15px;
+        gap: 15px;
+    }
+}
+.interviews_item h3 {
+    margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+    .interviews_item h3 {
+        margin-top: 15px;
+    }
+}
+.interviews_item-img {
+    display: block;
+    position: relative;
+}
+.interviews_item-img img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.interviews_item-img::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 40, 81, 0.9);
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.interviews_item-img:hover .interviews_item-zoom,
+.interviews_item-img:hover::before {
+    opacity: 1;
+}
+.interviews_item-zoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: table;
+    font-size: 29px;
+    line-height: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f6f1ff;
+    padding-right: 35px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    z-index: 2;
+    white-space: nowrap;
+}
+@media screen and (max-width: 1400px) {
+    .interviews_item-zoom {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+.interviews_item-zoom::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: center/contain url(../svg/link-arrow.svg) no-repeat;
+}
+@media screen and (max-width: 1400px) {
+    .interviews_item-zoom::before {
+        top: 0;
+        height: 18px;
+        width: 20px;
+    }
+}
+/*# sourceMappingURL=interviews.css.map */

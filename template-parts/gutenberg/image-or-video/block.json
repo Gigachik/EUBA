@@ -1,0 +1,20 @@
+{
+    "name": "acf/image-or-video",
+    "title": "Image or video",
+    "description": "",
+    "style": ["file:./image-or-video.css"],
+    "script": ["file:./image-or-video.js"],
+    "editorScript": ["file:./image-or-video-admin.js"],
+    "editorStyle": ["file:./image-or-video-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["image-or-video"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-or-video.php"
+    },
+    "align": "full"
+}

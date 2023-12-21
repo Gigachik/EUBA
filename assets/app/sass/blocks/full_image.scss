@@ -1,0 +1,13 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.full_image {
+    img {
+        width: 100%;
+        display: block;
+        box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+        @include mq-inv-small {
+            min-height: 350px;
+            object-fit: cover;
+        }
+    }
+}

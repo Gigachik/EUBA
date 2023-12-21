@@ -1,0 +1,98 @@
+.audio_image {
+    padding: 45px 0;
+}
+@media screen and (max-width: 1700px) {
+    .audio_image {
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .audio_image {
+        padding: 20px 0;
+    }
+}
+.audio_image-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 40px;
+}
+@media screen and (max-width: 1024px) {
+    .audio_image-inner {
+        display: block;
+    }
+}
+.audio_image-top {
+    padding: 15px 25px;
+    border-radius: 25px 25px 0 0;
+    border: 2px solid #002851;
+    background: #002851;
+}
+.audio_image-top h6 {
+    margin-bottom: 0;
+    color: #f6f1ff;
+}
+.audio_image-info {
+    padding: 25px;
+    border-left: 2px solid #002851;
+    border-right: 2px solid #002851;
+}
+.audio_image-block {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+@media screen and (max-width: 1024px) {
+    .audio_image-block {
+        margin-bottom: 20px;
+    }
+}
+.audio_image-block figure {
+    position: relative;
+}
+.audio_image-block .h5ap_standard_player .plyr__controls {
+    background: #002851 !important;
+}
+.audio_image-block .h5ap_standard_player .plyr__control svg {
+    fill: #f6f1ff;
+}
+.audio_image-block .h5ap_standard_player .plyr__control:hover {
+    background-color: #f6f1ff !important;
+}
+.audio_image-block .h5ap_standard_player .plyr__control:hover svg {
+    fill: #002851;
+}
+.audio_image-block .h5ap_standard_player .plyr__time {
+    font-family: EurostileLTP, sans-serif;
+    font-size: 16px;
+    color: #f6f1ff;
+}
+.audio_image-block .h5ap_standard_player .plyr--full-ui input[type="range"] {
+    color: #5189ac;
+}
+.audio_image-block
+    .h5ap_standard_player
+    .plyr--full-ui
+    input[type="range"]::-webkit-slider-thumb {
+    background: #f6f1ff;
+}
+.audio_image-img {
+    max-width: 535px;
+}
+@media screen and (max-width: 1400px) {
+    .audio_image-img {
+        max-width: 420px;
+    }
+}
+.mac .audio_image-top {
+    padding: 15px 20px 8px;
+}
+@media screen and (max-width: 767px) {
+    .mac .audio_image-top {
+        padding: 12px 20px 7px;
+    }
+}
+/*# sourceMappingURL=audio_image.css.map */

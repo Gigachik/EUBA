@@ -1,0 +1,76 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.image_quote {
+    padding: 45px 0;
+    @include mq-inv-desktop {
+        padding: 30px 0;
+    }
+    @include mq-inv-small {
+        padding: 20px 0;
+    }
+    &-inner {
+        display: flex;
+        gap: 30px;
+        align-items: flex-end;
+        @include mq-inv-extra-small {
+            gap: 10px;
+            align-items: flex-start;
+        }
+        &.alone {
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+    }
+    &-img {
+        img {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            object-fit: cover;
+            @include mq-inv-extra-small {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+    &-block {
+        padding-top: 20px;
+        flex: 1;
+        @include mq-inv-extra-small {
+            padding-top: 0;
+        }
+        h3 {
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 40px;
+            letter-spacing: -0.766px;
+            text-transform: initial;
+            margin-bottom: 5px;
+            @include mq-inv-extra-large {
+                font-size: 22px;
+                line-height: 28px;
+            }
+            @include mq-inv-extra-small {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        h4 {
+            @include mq-inv-extra-small {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 5px;
+            }
+        }
+        h5,
+        p {
+            color: $grey;
+            margin-bottom: 0;
+            font-weight: 400;
+            @include mq-inv-extra-small {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

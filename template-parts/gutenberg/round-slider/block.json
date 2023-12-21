@@ -1,0 +1,20 @@
+{
+    "name": "acf/round-slider",
+    "title": "Round slider",
+    "description": "",
+    "style": ["file:./round-slider.css"],
+    "script": ["file:./round-slider.js"],
+    "editorScript": ["file:./round-slider-admin.js"],
+    "editorStyle": ["file:./round-slider-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["round-slider"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "round-slider.php"
+    },
+    "align": "full"
+}

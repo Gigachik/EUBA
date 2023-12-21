@@ -1,0 +1,12 @@
+.fancybox {
+    &__container {
+        --fancybox-bg: rgba(0, 40, 81, 0.9);
+    }
+    &__caption {
+        font-size: 23px;
+        color: $white;
+    }
+}
+.f-button {
+    background: transparent;
+}

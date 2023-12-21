@@ -1,0 +1,8 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.script {
+    padding: 65px 0;
+    @include mq-inv-desktop {
+        padding: 30px 0;
+    }
+}

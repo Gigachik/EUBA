@@ -1,0 +1,20 @@
+{
+    "name": "acf/text-with-script",
+    "title": "Text with script",
+    "description": "",
+    "style": ["file:./text-with-script.css"],
+    "script": ["file:./text-with-script.js"],
+    "editorScript": ["file:./text-with-script-admin.js"],
+    "editorStyle": ["file:./text-with-script-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["text-with-script"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-with-script.php"
+    },
+    "align": "full"
+}

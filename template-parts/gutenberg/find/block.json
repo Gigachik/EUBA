@@ -1,0 +1,20 @@
+{
+    "name": "acf/find",
+    "title": "Find",
+    "description": "",
+    "style": ["file:./find.css"],
+    "script": ["file:./find.js"],
+    "editorScript": ["file:./find-admin.js"],
+    "editorStyle": ["file:./find-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["find"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "find.php"
+    },
+    "align": "full"
+}

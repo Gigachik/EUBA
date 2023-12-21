@@ -1,0 +1,112 @@
+.image_video {
+    padding: 45px 0;
+}
+@media screen and (max-width: 1700px) {
+    .image_video {
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .image_video {
+        padding: 20px 0;
+    }
+}
+.image_video-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    row-gap: 40px;
+}
+.image_video-inner > div:only-child {
+    width: 100%;
+}
+.image_video-item {
+    width: calc(50% - 20px);
+}
+@media screen and (max-width: 767px) {
+    .image_video-item {
+        width: 100%;
+    }
+}
+.image_video-item img {
+    display: block;
+    width: 100%;
+    max-height: 715px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    margin-bottom: 25px;
+}
+.image_video-item img.image_video-play {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 184px;
+    z-index: 2;
+    pointer-events: initial;
+}
+@media screen and (max-width: 1400px) {
+    .image_video-item img.image_video-play {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .image_video-item img.image_video-play {
+        width: 88px;
+    }
+}
+.image_video-item.popup .text {
+    padding: 25px;
+    border-radius: 0 0 25px 25px;
+    border: 2px solid #002851;
+}
+@media screen and (max-width: 767px) {
+    .image_video-item.popup .text {
+        padding: 15px;
+    }
+}
+.image_video-top {
+    padding: 15px 25px;
+    background: #002851;
+    border-radius: 25px 25px 0 0;
+    border: 2px solid #002851;
+}
+@media screen and (max-width: 767px) {
+    .image_video-top {
+        padding: 10px 15px;
+    }
+}
+.image_video-top h6 {
+    color: #f6f1ff;
+    margin-bottom: 0;
+}
+.image_video-popup {
+    position: relative;
+    border-left: 2px solid #002851;
+    border-right: 2px solid #002851;
+}
+.image_video-popup img {
+    margin-bottom: 0;
+}
+.mac .image_video-top {
+    padding: 15px 25px 8px;
+}
+@media screen and (max-width: 767px) {
+    .mac .image_video-top {
+        padding: 10px 15px 5px;
+    }
+}
+/*# sourceMappingURL=image_video.css.map */

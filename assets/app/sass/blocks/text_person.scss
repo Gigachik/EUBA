@@ -1,0 +1,111 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.text_person {
+    padding: 45px 0;
+    @include mq-inv-desktop {
+        padding: 30px 0;
+    }
+    @include mq-inv-small {
+        padding: 20px 0;
+    }
+    &-inner {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        @include mq-inv-tablet {
+            display: block;
+        }
+    }
+    &-list {
+        max-width: 530px;
+        @include mq-inv-extra-large {
+            max-width: 450px;
+        }
+        @include mq-inv-tablet {
+            margin-top: 55px;
+        }
+    }
+    &-info {
+        flex: 1;
+    }
+    &-top {
+        border-radius: 25px 25px 0 0;
+        position: relative;
+        padding: 15px 28px;
+        background: $mainColor;
+        padding-right: 160px;
+        border: 2px solid $mainColor;
+        border-bottom: 0;
+        @include mq-inv-tablet {
+            padding-right: 80px;
+        }
+        @include mq-inv-small {
+            padding: 12px 20px;
+            padding-right: 80px;
+        }
+        h6 {
+            color: $white;
+            margin-bottom: 0;
+        }
+        img {
+            width: 184px;
+            height: 184px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: -85px;
+            right: -20px;
+            @include mq-inv-extra-large {
+                width: 140px;
+                height: 140px;
+                right: -15px;
+                top: -50px;
+            }
+            @include mq-inv-tablet {
+                width: 80px;
+                height: 80px;
+                top: -20px;
+                right: -5px;
+            }
+        }
+    }
+    &-block {
+        padding: 25px;
+        border: 2px solid $mainColor;
+        border-radius: 0 0 25px 25px;
+        @include mq-inv-small {
+            padding: 15px 20px;
+        }
+        h6,
+        h5 {
+            padding-right: 135px;
+            margin-bottom: 5px;
+            @include mq-inv-tablet {
+                padding-right: 0;
+            }
+        }
+    }
+    &-script {
+        margin-top: 125px;
+        @include mq-inv-tablet {
+            margin-top: 55px;
+        }
+        @include mq-inv-small {
+            margin-top: 30px;
+        }
+    }
+}
+.mac {
+    .text_person-top {
+        padding: 15px 20px 8px;
+        padding-right: 160px;
+        @include mq-inv-tablet {
+            padding-right: 80px;
+        }
+        @include mq-inv-small {
+            padding: 12px 20px 7px;
+            padding-right: 80px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "acf/text-with-image",
+    "title": "Text with image",
+    "description": "",
+    "style": ["file:./text-with-image.css"],
+    "script": ["file:./text-with-image.js"],
+    "editorScript": ["file:./text-with-image-admin.js"],
+    "editorStyle": ["file:./text-with-image-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["text-with-image"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-with-image.php"
+    },
+    "align": "full"
+}

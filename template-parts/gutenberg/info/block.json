@@ -1,0 +1,25 @@
+{
+    "name": "acf/info",
+    "title": "Info",
+    "description": "",
+    "style": ["file:./info.css"],
+    "script": ["file:./info.js"],
+    "editorScript": ["file:./info-admin.js"],
+    "editorStyle": ["file:./info-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["info"],
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true
+        },
+        "mode": false
+    },
+
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "info.php"
+    },
+    "align": "full"
+}

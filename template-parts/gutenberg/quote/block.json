@@ -1,0 +1,20 @@
+{
+    "name": "acf/quote",
+    "title": "Quote",
+    "description": "",
+    "style": ["file:./quote.css"],
+    "script": ["file:./quote.js"],
+    "editorScript": ["file:./quote-admin.js"],
+    "editorStyle": ["file:./quote-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["quote"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "quote.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,33 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.gallery {
+    padding: 45px 0;
+    background-color: $mainColor;
+    @include mq-inv-small {
+        padding: 30px 0;
+    }
+    a {
+        display: table;
+        margin: 0 auto;
+    }
+    img {
+        max-width: 100%;
+    }
+    h2 {
+        color: $white;
+        max-width: 1730px;
+        margin: 0 auto 50px;
+        padding: 0 25px;
+        @include mq-inv-large {
+            padding: 0 20px;
+            margin: 0 auto 30px;
+        }
+        @include mq-inv-medium {
+            padding: 0 15px;
+            margin: 0 auto 20px;
+        }
+    }
+    &_swiper {
+        text-align: center;
+    }
+}

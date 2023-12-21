@@ -1,0 +1,20 @@
+{
+    "name": "acf/select-cpt",
+    "title": "Select Custom Post Types",
+    "description": "",
+    "style": ["file:./select-cpt.css"],
+    "script": ["file:./select-cpt.js"],
+    "editorScript": ["file:./select-cpt-admin.js"],
+    "editorStyle": ["file:./select-cpt-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["select-cpt"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "select-cpt.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,22 @@
+// colors
+$mainColor: #002851;
+$blue: #5189AC;
+$white: #f6f1ff;
+$orange: #c66a2b;
+$grey: #798197;
+$darkGrey: #4e5873;
+// fonts
+$mainFont: "EurostileLTP", sans-serif;
+// transition
+$transition: all 0.2s linear;
+
+@mixin itemGrid($n, $gap) {
+    width: calc(100% / #{$n} - #{$gap}px + #{$gap}px / #{$n});
+    margin-right: #{$gap}px;
+    &:nth-child(#{$n + 1}n) {
+        margin-right: #{$gap}px;
+    }
+    &:nth-child(#{$n}n) {
+        margin-right: 0;
+    }
+}

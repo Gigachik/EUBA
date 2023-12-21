@@ -1,0 +1,19 @@
+{
+    "name": "acf/info-with-icon",
+    "title": "Info with icon",
+    "description": "",
+    "style": ["file:./info-with-icon.css"],
+    "script": ["file:./info-with-icon.js"],
+    "editorScript": ["file:./info-with-icon-admin.js"],
+    "editorStyle": ["file:./info-with-icon-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["info-with-icon"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "info-with-icon.php"
+    }
+}

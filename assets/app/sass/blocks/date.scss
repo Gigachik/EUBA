@@ -1,0 +1,8 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.date {
+    padding: 20px 0;
+    &_text {
+        color: $grey;
+    }
+}

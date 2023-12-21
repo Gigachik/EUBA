@@ -1,0 +1,17 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.title_text {
+    padding: 85px 0;
+    @include mq-inv-desktop {
+        padding: 40px 0;
+    }
+    @include mq-inv-small {
+        padding: 30px 0;
+    }
+    .text {
+        h3,
+        h4 {
+            font-weight: 400;
+        }
+    }
+}

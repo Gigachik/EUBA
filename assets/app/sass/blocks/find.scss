@@ -1,0 +1,99 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.find {
+    padding: 95px 0 125px;
+    border-bottom: 3px solid $darkGrey;
+    background: $mainColor;
+    @include mq-inv-desktop {
+        padding: 45px 0 75px;
+    }
+    @include mq-inv-small {
+        padding: 80px 0 38px;
+    }
+    &_top {
+        position: relative;
+        &-gif {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 260px;
+            z-index: 2;
+            @include mq-inv-desktop {
+                max-width: 190px;
+            }
+            @include mq-inv-extra-large {
+                max-width: 160px;
+            }
+            @include mq-inv-small {
+                max-width: 90px;
+                bottom: 0;
+            }
+        }
+    }
+    &_inner {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 42px;
+        column-gap: 35px;
+        margin-top: 85px;
+        @include mq-inv-desktop {
+            margin-top: 45px;
+        }
+        @include mq-inv-tablet {
+            row-gap: 26px;
+            column-gap: 20px;
+        }
+        @include mq-inv-small {
+            margin-top: 30px;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+    }
+    h2 {
+        color: $white;
+    }
+    &_link {
+        display: flex;
+        align-items: center;
+        min-height: 104px;
+        padding: 20px 35px;
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.665px;
+        text-transform: uppercase;
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 66px;
+        transition: $transition;
+        &:hover {
+            background: $white;
+            color: $mainColor;
+        }
+        @include mq-inv-desktop {
+            font-size: 24px;
+            min-height: 94px;
+        }
+        @include mq-inv-tablet {
+            font-size: 16px;
+            padding: 10px 25px;
+            min-height: auto;
+        }
+        @include mq-inv-small {
+            width: 100%;
+            padding: 10px 35px;
+            min-height: 51px;
+        }
+    }
+}
+.mac {
+    .find_link {
+        padding: 20px 35px 12px;
+        @include mq-inv-tablet {
+            padding: 10px 25px 6px;
+        }
+        @include mq-inv-small {
+            padding: 10px 35px 6px;
+        }
+    }
+}

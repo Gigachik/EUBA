@@ -1,0 +1,20 @@
+{
+    "name": "acf/columns-with-text",
+    "title": "Columns with text",
+    "description": "",
+    "style": ["file:./columns-with-text.css"],
+    "script": ["file:./columns-with-text.js"],
+    "editorScript": ["file:./columns-with-text-admin.js"],
+    "editorStyle": ["file:./columns-with-text-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["columns-with-text"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "columns-with-text.php"
+    },
+    "align": "full"
+}

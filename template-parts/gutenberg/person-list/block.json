@@ -1,0 +1,20 @@
+{
+    "name": "acf/person-list",
+    "title": "Person list",
+    "description": "",
+    "style": ["file:./person-list.css"],
+    "script": ["file:./person-list.js"],
+    "editorScript": ["file:./person-list-admin.js"],
+    "editorStyle": ["file:./person-list-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["person-list"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "person-list.php"
+    },
+    "align": "full"
+}

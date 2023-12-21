@@ -1,0 +1,20 @@
+{
+    "name": "acf/category-tag",
+    "title": "Category tag",
+    "description": "",
+    "style": ["file:./category-tag.css"],
+    "script": ["file:./category-tag.js"],
+    "editorScript": ["file:./category-tag-admin.js"],
+    "editorStyle": ["file:./category-tag-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["category-tag"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "category-tag.php"
+    },
+    "align": "full"
+}

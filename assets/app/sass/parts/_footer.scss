@@ -1,0 +1,141 @@
+.footer {
+    padding: 80px 0;
+    background-color: $mainColor;
+    @include mq-inv-desktop {
+        padding: 40px 0;
+    }
+    @include mq-inv-small {
+        padding: 30px 0;
+    }
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 70px;
+        @include mq-inv-tablet {
+            display: block;
+            margin-top: 30px;
+        }
+    }
+    &_logo {
+        display: table;
+        img {
+            @include mq-inv-small {
+                max-width: 240px;
+            }
+        }
+    }
+    &_socials {
+        display: flex;
+        align-items: flex-start;
+        gap: 26px;
+        @include mq-inv-small {
+            gap: 30px;
+        }
+        a {
+            img {
+                transition: $transition;
+                @include mq-inv-small {
+                    width: 33px;
+                }
+            }
+            &:hover {
+                img {
+                    filter: opacity(0.5);
+                }
+            }
+        }
+    }
+    &_nav {
+        @include mq-inv-tablet {
+            margin-top: 30px;
+        }
+        ul {
+            display: flex;
+            gap: 85px;
+
+            @include mq-inv-extra-large {
+                gap: 40px;
+            }
+            @include mq-inv-tablet {
+                display: block;
+                padding-left: 0;
+            }
+            li {
+                list-style: none;
+                &:not(:last-child) {
+                    @include mq-inv-tablet {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        a {
+            font-size: 29px;
+            font-weight: 400;
+            line-height: 1;
+            color: $white;
+            text-transform: uppercase;
+            transition: $transition;
+            &:hover {
+                color: $blue;
+            }
+
+            @include mq-inv-desktop {
+                font-size: 17px;
+            }
+        }
+    }
+    &_lock {
+        padding: 160px 0 30px;
+        @include mq-inv-tablet {
+            padding: 100px 0 30px;
+        }
+        @include mq-inv-small {
+            padding: 60px 0 30px;
+        }
+        &-nav {
+            display: flex;
+            justify-content: flex-end;
+            @include mq-inv-small {
+                justify-content: flex-start;
+            }
+            ul {
+                display: flex;
+                gap: 85px;
+
+                @include mq-inv-extra-large {
+                    gap: 40px;
+                }
+                @include mq-inv-small {
+                    display: block;
+                    padding-left: 0;
+                }
+                li {
+                    list-style: none;
+                    &:not(:last-child) {
+                        @include mq-inv-small {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    a {
+                        text-transform: uppercase;
+                        font-size: 29px;
+                        font-weight: 400;
+                        line-height: 1;
+                        color: $mainColor;
+                        text-transform: uppercase;
+                        transition: $transition;
+                        &:hover {
+                            color: $blue;
+                        }
+
+                        @include mq-inv-small {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

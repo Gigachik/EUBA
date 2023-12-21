@@ -1,0 +1,30 @@
+.rs-handle {
+    background: center / contain url("../img/round_slider/icon.svg") no-repeat;
+    transform: rotate(-90deg);
+    &-round {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 105px;
+            height: 340px;
+            left: 50%;
+            top: calc(100% + 40px);
+            background: center / contain url("../img/round_slider/arrow.svg")
+                no-repeat;
+            transform: translateX(-50%);
+            @include mq-inv-tablet {
+                width: 70px;
+                height: 170px;
+            }
+            @media (max-width: 640px) {
+                width: 40px;
+                height: 90px;
+                top: calc(100% + 10px);
+            }
+        }
+    }
+}
+.rs-disabled{
+    opacity: 1;
+}

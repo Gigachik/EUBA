@@ -1,0 +1,57 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.info_icon {
+    padding: 45px 0;
+    @include mq-inv-desktop {
+        padding: 30px 0;
+    }
+    @include mq-inv-small {
+        padding: 20px 0;
+    }
+
+    &-item {
+        width: calc(50% - 20px);
+        @include mq-inv-small {
+            width: 100%;
+        }
+        .text {
+            padding: 25px;
+            border: 2px solid $mainColor;
+            border-radius: 0 0 25px 25px;
+            @include mq-inv-small {
+                padding: 15px;
+            }
+        }
+        &.right {
+            margin-left: auto;
+        }
+    }
+    &-top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 25px;
+        border-radius: 25px 25px 0 0;
+        border: 2px solid $mainColor;
+        background: $mainColor;
+        @include mq-inv-small {
+            padding: 10px 15px;
+            gap: 10px;
+            img {
+                width: 15px;
+            }
+        }
+        h6 {
+            margin-bottom: 0;
+            color: $white;
+        }
+    }
+}
+.mac {
+    .info_icon-top {
+        padding: 15px 25px 8px;
+        @include mq-inv-small {
+            padding: 10px 15px 5px;
+        }
+    }
+}

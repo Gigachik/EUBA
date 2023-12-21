@@ -1,0 +1,20 @@
+{
+    "name": "acf/choices",
+    "title": "Choices",
+    "description": "",
+    "style": ["file:./choices.css"],
+    "script": ["file:./choices.js"],
+    "editorScript": ["file:./choices-admin.js"],
+    "editorStyle": ["file:./choices-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["choices"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "choices.php"
+    },
+    "align": "full"
+}

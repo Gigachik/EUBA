@@ -1,0 +1,84 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.quotes {
+    position: relative;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+    .swiper {
+        &-slide {
+            background-size: cover;
+            background-position: left bottom;
+            position: relative;
+            min-height: 790px;
+            display: flex;
+            align-items: center;
+            height: auto;
+            @include mq-inv-desktop {
+                min-height: 590px;
+                padding: 80px 0;
+            }
+            @include mq-inv-extra-large {
+                min-height: 490px;
+            }
+            @include mq-inv-small {
+                align-items: flex-start;
+                padding: 355px 0 75px;
+                background-position: top left;
+            }
+
+            &-active {
+                .quotes_item {
+                    h2,
+                    .border_text,
+                    &-flex {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+        &-pagination {
+            bottom: 32px !important;
+            @include mq-inv-small {
+                bottom: 22px !important;
+            }
+        }
+    }
+    &_item {
+        position: relative;
+        z-index: 3;
+        max-width: 795px;
+        margin-left: auto;
+        @include mq-inv-extra-large {
+            max-width: 595px;
+        }
+        @include mq-inv-tablet {
+            max-width: 440px;
+        }
+        h2 {
+            margin-top: 40px;
+            color: $white;
+
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: 0.4s all 0.4s linear;
+        }
+        .border_text {
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: 0.2s transform 0.4s linear, 0.2s opacity 0.4s linear,
+                background 0.2s linear, color 0.2s linear;
+        }
+        &-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: 0.6s all 0.4s linear;
+
+            @include mq-inv-small {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "acf/audio-with-image",
+    "title": "Audio with image",
+    "description": "",
+    "style": ["file:./audio-with-image.css"],
+    "script": ["file:./audio-with-image.js"],
+    "editorScript": ["file:./audio-with-image-admin.js"],
+    "editorStyle": ["file:./audio-with-image-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["audio-with-image"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "audio-with-image.php"
+    },
+    "align": "full"
+}

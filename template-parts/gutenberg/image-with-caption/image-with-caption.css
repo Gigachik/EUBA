@@ -1,0 +1,17 @@
+.image_caption {
+    padding: 45px 0;
+}
+@media screen and (max-width: 1700px) {
+    .image_caption {
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .image_caption {
+        padding: 20px 0;
+    }
+}
+.image_caption img {
+    width: 100%;
+}
+/*# sourceMappingURL=image_caption.css.map */

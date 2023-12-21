@@ -1,0 +1,55 @@
+.swiper {
+    &-button {
+        &-next,
+        &-prev {
+            &::after {
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+    &-pagination {
+        &-bullet {
+            background: $white;
+            opacity: 1;
+            height: 10px;
+            width: 10px;
+            &-active {
+                width: 53px;
+                background: $orange;
+                border-radius: 24px;
+            }
+        }
+    }
+    &_controllers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 160px;
+        margin-top: 40px;
+        @include mq-inv-small {
+            gap: 25px;
+        }
+        .swiper {
+            &-button {
+                &-next,
+                &-prev {
+                    position: relative;
+                    top: initial;
+                    left: initial;
+                    right: initial;
+                    margin: 0;
+                    &::after {
+                        font-size: 22px;
+                    }
+                }
+            }
+            &-pagination {
+                position: relative;
+                margin: 0;
+                bottom: initial;
+                width: auto;
+            }
+        }
+    }
+}

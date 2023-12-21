@@ -1,0 +1,145 @@
+.person_list {
+    padding: 65px 0 125px;
+}
+@media screen and (max-width: 1400px) {
+    .person_list {
+        padding: 45px 0 75px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .person_list {
+        padding: 30px 0;
+    }
+}
+.person_list-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 185px;
+}
+@media screen and (max-width: 1400px) {
+    .person_list-inner {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        gap: 80px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .person_list-inner {
+        display: block;
+    }
+}
+.person_list-item {
+    max-width: 530px;
+    margin-top: 80px;
+}
+@media screen and (max-width: 1400px) {
+    .person_list-item {
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .person_list-item {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .person_list-item {
+        max-width: 450px;
+    }
+    .person_list-item:not(:first-child) {
+        margin-top: 35px;
+    }
+}
+.person_list-top {
+    border-radius: 25px 25px 0 0;
+    position: relative;
+    padding: 15px 28px;
+    background: #002851;
+    padding-right: 160px;
+    border: 2px solid #002851;
+    border-bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+    .person_list-top {
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .person_list-top {
+        padding: 12px 20px;
+        padding-right: 80px;
+    }
+}
+.person_list-top h6 {
+    color: #f6f1ff;
+    margin-bottom: 0;
+}
+.person_list-top img {
+    width: 184px;
+    height: 184px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -65px;
+    right: -42px;
+}
+@media screen and (max-width: 1400px) {
+    .person_list-top img {
+        width: 140px;
+        height: 140px;
+        right: -15px;
+        top: -50px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .person_list-top img {
+        width: 80px;
+        height: 80px;
+        top: -20px;
+        right: -5px;
+    }
+}
+.person_list-block {
+    padding: 25px;
+    border: 2px solid #002851;
+    border-radius: 0 0 25px 25px;
+}
+@media screen and (max-width: 767px) {
+    .person_list-block {
+        padding: 15px 20px;
+    }
+}
+.person_list-block h5,
+.person_list-block h6 {
+    margin-bottom: 5px;
+    padding-right: 135px;
+}
+@media screen and (max-width: 1024px) {
+    .person_list-block h5,
+    .person_list-block h6 {
+        padding-right: 0;
+    }
+}
+.mac .person_list-top {
+    padding: 15px 28px 8px;
+    padding-right: 160px;
+}
+@media screen and (max-width: 1024px) {
+    .mac .person_list-top {
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .mac .person_list-top {
+        padding: 12px 20px 7px;
+        padding-right: 80px;
+    }
+}
+/*# sourceMappingURL=person_list.css.map */

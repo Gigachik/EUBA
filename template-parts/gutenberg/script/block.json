@@ -1,0 +1,20 @@
+{
+    "name": "acf/script",
+    "title": "Script",
+    "description": "",
+    "style": ["file:./script.css"],
+    "script": ["file:./script.js"],
+    "editorScript": ["file:./script-admin.js"],
+    "editorStyle": ["file:./script-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["script"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "script.php"
+    },
+    "align": "full"
+}

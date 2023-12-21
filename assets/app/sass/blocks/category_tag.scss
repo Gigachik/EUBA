@@ -1,0 +1,25 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.category_tag {
+    padding-top: 85px;
+    @include mq-inv-desktop {
+        padding-top: 45px;
+    }
+    @include mq-inv-tablet {
+        padding-top: 35px;
+    }
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq-inv-small {
+            display: block;
+        }
+    }
+    .tag {
+        font-size: 21px;
+        @include mq-inv-small {
+            margin-top: 15px;
+        }
+    }
+}

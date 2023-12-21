@@ -1,0 +1,20 @@
+{
+    "name": "acf/full-image",
+    "title": "Full image",
+    "description": "",
+    "style": ["file:./full-image.css"],
+    "script": ["file:./full-image.js"],
+    "editorScript": ["file:./full-image-admin.js"],
+    "editorStyle": ["file:./full-image-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["full-image"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "full-image.php"
+    },
+    "align": "full"
+}

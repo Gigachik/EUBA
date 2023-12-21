@@ -1,0 +1,106 @@
+.mac {
+    .search_form {
+        label {
+            input {
+                padding: 7px 20px 0 60px;
+                @include mq-inv-small {
+                    padding: 7px 20px 2px 60px;
+                }
+            }
+        }
+    }
+}
+.search_form {
+    position: relative;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 70px;
+    display: none;
+    @include mq-inv-extra-large {
+        margin-right: 35px;
+    }
+    @include mq-inv-tablet {
+        order: 3;
+        width: 100vw;
+        margin-top: 25px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-top: 2px solid $white;
+        border-bottom: 2px solid $white;
+        padding: 45px 20px;
+    }
+    &.active {
+        display: block;
+    }
+    div {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .search-submit {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        background: center / contain url("../svg/loop.svg") no-repeat;
+        order: -1;
+        flex: initial;
+        transform: translateY(-50%);
+        border: 0;
+        padding: 0;
+        z-index: 2;
+        @include mq-inv-tablet {
+            left: 40px;
+        }
+        @include mq-inv-small {
+            width: 20px;
+            height: 20px;
+            left: 35px;
+        }
+    }
+    label {
+        @include mq-inv-tablet {
+            display: block;
+        }
+
+        input {
+            border: 0;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 42px;
+            letter-spacing: -0.448px;
+            color: $white;
+            flex: 1;
+            padding: 7px 20px 7px 60px;
+            border-radius: 50px;
+            border: 2px solid $white;
+            width: 187px;
+            transition: $transition;
+            &::placeholder {
+                opacity: 1;
+                color: $white;
+                font-weight: 600;
+            }
+            &.active {
+                width: 29vw;
+                @include mq-inv-extra-large {
+                    width: 28vw;
+                }
+
+                @include mq-inv-tablet {
+                    width: 100%;
+                }
+            }
+            @include mq-inv-tablet {
+                width: 100%;
+            }
+            @include mq-inv-small {
+                font-size: 14px;
+                line-height: 20px;
+                padding-left: 47px;
+            }
+        }
+    }
+}

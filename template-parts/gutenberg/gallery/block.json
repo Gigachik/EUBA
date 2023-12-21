@@ -1,0 +1,20 @@
+{
+    "name": "acf/gallery",
+    "title": "Gallery",
+    "description": "",
+    "style": ["file:./gallery.css"],
+    "script": ["file:./gallery.js"],
+    "editorScript": ["file:./gallery-admin.js"],
+    "editorStyle": ["file:./gallery-admin.css"],
+    "category": "theme",
+    "icon": "align-full-width",
+    "keywords": ["gallery"],
+    "supports": {
+        "mode": false
+    },
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "gallery.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,70 @@
+.link {
+    position: relative;
+    display: inline-block;
+    font-size: 29px;
+    line-height: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $white;
+    padding-right: 35px;
+    overflow: hidden;
+    @include mq-inv-extra-large {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        top: 6px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        background: center / contain url("../svg/link-arrow.svg") no-repeat;
+        transition: $transition;
+        @include mq-inv-extra-large {
+            top: 0;
+            height: 18px;
+            width: 20px;
+        }
+    }
+    &::after {
+        transform: translateY(calc(100% + 20px));
+    }
+    &:hover {
+        &::after {
+            transform: translateY(0);
+        }
+        &::before {
+            transform: translateY(calc(-100% - 20px));
+        }
+    }
+}
+.btn {
+    display: table;
+    font-size: 27px;
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+    background-color: $mainColor;
+    border: 2px solid $mainColor;
+    padding: 40px 25px;
+    border-radius: 124px;
+    transition: $transition;
+    &:hover {
+        color: $mainColor;
+        background-color: transparent;
+    }
+    @include mq-inv-tablet {
+        font-size: 17px;
+        padding: 20px 15px;
+    }
+}
+.mac {
+    .btn {
+        padding-bottom: 34px;
+        @include mq-inv-tablet {
+            padding-bottom: 14px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.text_script {
+    padding: 45px 0;
+    @include mq-inv-desktop {
+        padding: 30px 0;
+    }
+    &-inner {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        @include mq-inv-small {
+            display: block;
+        }
+    }
+    &-info {
+        max-width: 820px;
+        @include mq-inv-extra-large {
+            max-width: 700px;
+        }
+        @include mq-inv-tablet {
+            max-width: 500px;
+        }
+        @include mq-inv-small {
+            max-width: 100%;
+        }
+    }
+    &-date {
+        margin-top: 45px;
+        color: $grey;
+    }
+    &-script {
+        text-align: right;
+        flex: 1;
+        @include mq-inv-small {
+            margin-top: 35px;
+        }
+    }
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 75px;
+            @include mq-inv-small {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}

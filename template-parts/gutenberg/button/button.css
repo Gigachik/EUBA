@@ -1,0 +1,13 @@
+.button {
+    padding: 45px 0;
+}
+@media screen and (max-width: 1700px) {
+    .button {
+        padding: 30px 0;
+    }
+}
+.button .btn {
+    max-width: 820px;
+    width: 100%;
+}
+/*# sourceMappingURL=button.css.map */

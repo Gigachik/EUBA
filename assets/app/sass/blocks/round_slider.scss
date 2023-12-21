@@ -1,0 +1,119 @@
+@use "../inc/vars" as *;
+@use "../inc/media" as *;
+.round_slider {
+    padding: 45px 0;
+    position: relative;
+    @include mq-inv-desktop {
+        padding: 40px 0;
+    }
+    @include mq-inv-small {
+        padding: 20px 0;
+    }
+    &-slider {
+        position: relative;
+        margin: 85px auto 0;
+        @include mq-inv-desktop {
+            margin: 45px auto 0;
+        }
+    }
+    &-response {
+        position: absolute;
+        bottom: 100px;
+        z-index: 8;
+        left: -25px;
+        display: none;
+        &.active {
+            display: block;
+        }
+        @media (max-width: 640px) {
+            bottom: 20px;
+        }
+        &.no {
+            right: -25px;
+            @include mq-inv-tablet {
+                right: -10px;
+            }
+            @media (max-width: 640px) {
+                right: -15px;
+            }
+        }
+
+        @include mq-inv-tablet {
+            left: -10px;
+        }
+        @media (max-width: 640px) {
+            left: -15px;
+        }
+        div {
+            position: relative;
+            transform-origin: 50% 100%;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            font-weight: 600;
+            background: center / 85px url("./icon.svg") no-repeat $blue;
+            @include mq-inv-tablet {
+                width: 84px;
+                height: 84px;
+                background: center / 55px url("./icon.svg") no-repeat $blue;
+            }
+            @media (max-width: 640px) {
+                width: 60px;
+                height: 60px;
+                background: center / 35px url("./icon.svg") no-repeat $blue;
+            }
+
+            h3 {
+                position: absolute;
+                top: calc(100% + 5px);
+                left: calc(100% + 5px);
+                color: $darkGrey;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-bottom {
+        max-width: 840px;
+        width: 100%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        @include mq-inv-tablet {
+            max-width: 500px;
+        }
+        @include mq-inv-small {
+            max-width: 300px;
+        }
+        &.active {
+            max-width: 1200px;
+            @include mq-inv-tablet {
+                max-width: 800px;
+            }
+            @include mq-inv-small {
+                max-width: 100%;
+            }
+        }
+    }
+    &-item {
+        max-width: 40%;
+        @include mq-inv-small {
+            max-width: 48%;
+        }
+        &.active {
+            & > h3 {
+                display: none;
+            }
+            .round_slider-hidden {
+                display: block;
+            }
+        }
+    }
+    &-hidden {
+        display: none;
+        text-align: center;
+    }
+}
